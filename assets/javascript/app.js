@@ -30,13 +30,13 @@ function renderButtons() {
     $("#buttons").append(a);
   }
 }
-// "https://api.giphy.com/v1/gifs/search?api_key=Vm4B2VYM0r514xSsQO14zU0W4grZOe4p&q=dogs&limit=25&offset=0&rating=G&lang=en"
+
 $(document).on("click", ".gif-button", displayGifs);
 
 function displayGifs() {
 
   var input = $(this).attr("data-name");
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + input + "&api_key=Vm4B2VYM0r514xSsQO14zU0W4grZOe4p";
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + input + "&api_key=Vm4B2VYM0r514xSsQO14zU0W4grZOe4p&limit=10";
 
   $.ajax({
     url: queryURL,
