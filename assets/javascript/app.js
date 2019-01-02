@@ -46,19 +46,22 @@ function displayGifs() {
 
 function displayPage(picsData) {
   console.log(picsData);
-  console.log(picsData.data.length);
-  //console.log(picsData.data[0]);
- for (var i = 0; i < picsData.data.length; i++) {
+  
+  var results = picsData.data;
+
+ for (var i = 0; i < results.length; i++) {
  
-  console.log(i);
   var gifsDiv = $("<div class='gifs'>");
 
-  var imgURL = picsData.data[i].images.downsized.url; 
-  console.log(imgURL);
-  //console.log(picsData.data[0]);
+  var rating = results[i].rating;
+
+  var p = $("<p>").text("Rating: " + rating)
+
+  var imgURL = results[i].images.downsized.url; 
 
   var image = $("<img>").attr("src", imgURL);
 
+  gifsDiv.append(p);
   gifsDiv.append(image);
 
   $("#gifsMain").prepend(gifsDiv);
