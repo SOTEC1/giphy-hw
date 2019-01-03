@@ -1,0 +1,17 @@
+form {
+  text-align: center;
+}
+
+.jumbotron {
+  text-align: center;
+}
+
+.gif-button {
+  background: navy;
+  color: white;
+}
+
+#add-gif {
+  background: navy;
+  color: white; 
+}

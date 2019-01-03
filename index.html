@@ -7,26 +7,41 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <title>Get Gifs!</title>
 </head>
 
 <body>
-  <!-- search bar -->
-<div class="container">
-  <form id="gif-form">
-    <label for="gif-input">Search for a gif!</label>
-    <input type="text" id="gif-input">
-    <br>
+<!-- Jumbotron -->
 
-    <!-- Button triggers new movie to be added -->
-    <input id="add-gif" type="submit" value="Search">
-  </form>
-</div>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Got Gifs?</h1>
+      <p class="lead">Search All The Gifs!!!</p>
+    </div>
+  </div>
+
+  <!-- search bar -->
+  <div class="container my-5">
+    <form id="gif-form">
+      <label for="gif-input"><h4>Search for some gifs!</h4></label>
+      <br>
+      <input type="text" id="gif-input">
+
+      <!-- Button triggers new movie to be added -->
+      <input id="add-gif" type="submit" value="Search">
+    </form>
+  </div>
   <!-- gifs print here -->
   <div class="container my-3" id="buttons"></div>
 
-  <div class="container" id="gifsMain"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col" id="gifsMain">
+
+      </div>
+    </div>
+  </div>
 
 
 

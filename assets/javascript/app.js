@@ -1,6 +1,6 @@
 var i;
 // Initial array of buttons
-var buttons = ["skunk", "lion"];
+var buttons = ["Skunks", "Rocky Balboa", "Spaceships", "NBA", "Dat Boi"];
 
 renderButtons();
 
@@ -57,9 +57,17 @@ function displayPage(picsData) {
 
   var p = $("<p>").text("Rating: " + rating)
 
-  var imgURL = results[i].images.downsized.url; 
+  var imgURL = results[i].images.original_still.url; 
 
   var image = $("<img>").attr("src", imgURL);
+
+  image.attr("data-still", results[i].images.original_still.url);
+  image.attr("data-animate", results[i].images.fixed_height.url);
+  image.attr("data-state", "still");
+  image.attr("src", results[i].images.original_still.url);
+  image.on("click", animate);
+  image.css("width", 300);
+  image.css("height", 300);
 
   gifsDiv.append(p);
   gifsDiv.append(image);
@@ -82,4 +90,15 @@ function displayPage(picsData) {
    renderButtons();
 });
 
+function animate(event) {
+  event.preventDefault();
+  var state = $(this).attr("data-state");
+  if (state === "still") {
+    $(this).attr("src", $(this).attr("data-animate"));
+    $(this).attr("data-state", "animate");
+  } else {
+    $(this).attr("src", $(this).attr("data-still"));
+    $(this).attr("data-state", "still");
+  }  
+}
 
