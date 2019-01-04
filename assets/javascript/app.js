@@ -4,8 +4,6 @@ var buttons = ["Skunks", "Rocky Balboa", "Spaceships", "NBA", "Dat Boi"];
 
 renderButtons();
 
-
-
 // Function for displaying movie data
 function renderButtons() {
 
