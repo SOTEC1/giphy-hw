@@ -55,22 +55,28 @@ function displayPage(picsData) {
 
   var rating = results[i].rating;
 
-  var p = $("<p>").text("Rating: " + rating)
+  var p = $("<p>").text("Rating: " + rating);
 
-  var imgURL = results[i].images.original_still.url; 
+  var title = results[i].title;
+
+  var pT = $("<p>").text("Title: " + title);
+
+  var imgURL = results[i].images.fixed_height_still.url; 
 
   var image = $("<img>").attr("src", imgURL);
 
-  image.attr("data-still", results[i].images.original_still.url);
+  image.attr("data-still", results[i].images.fixed_height_still.url);
   image.attr("data-animate", results[i].images.fixed_height.url);
   image.attr("data-state", "still");
-  image.attr("src", results[i].images.original_still.url);
+  image.attr("src", results[i].images.fixed_height_still.url);
   image.on("click", animate);
   image.css("width", 300);
   image.css("height", 300);
 
-  gifsDiv.append(p);
+  
   gifsDiv.append(image);
+  gifsDiv.append(p);
+  gifsDiv.append(pT);
 
   $("#gifsMain").prepend(gifsDiv);
  }
