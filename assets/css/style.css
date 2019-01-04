@@ -1,17 +1,33 @@
+body, .jumbotron { 
+  background: url(../images/pepe.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 form {
   text-align: center;
+  color: white;
 }
 
 .jumbotron {
   text-align: center;
+  color: white;
 }
 
 .gif-button {
-  background: navy;
+  background: green;
   color: white;
 }
 
 #add-gif {
-  background: navy;
+  background: green;
   color: white; 
+}
+
+
+
+#gifsMain {
+  color: white;
 }
