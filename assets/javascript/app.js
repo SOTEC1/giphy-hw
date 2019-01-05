@@ -49,7 +49,7 @@ function displayPage(picsData) {
 
  for (var i = 0; i < results.length; i++) {
  
-  var gifsDiv = $("<div class='gifs'>");
+  var gifsDiv = $("<div class='parent col-md-6 col-lg-4 col-12 mb-1'>");
 
   var rating = results[i].rating;
 
