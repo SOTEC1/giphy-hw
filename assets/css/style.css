@@ -29,6 +29,7 @@ form {
 
 
 #gifsMain {
-  color: white;
-  
+  color: yellow;
+  font-size: 22px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
