@@ -39,6 +39,7 @@ $(document).on("click", ".gif-button", displayGifs);
 
 // function to display gifs
 function displayGifs() {
+  $("#gifsMain").empty();
   
   //creates variable w the value of the button to call in API search 
   var input = $(this).attr("data-name");
