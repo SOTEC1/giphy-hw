@@ -19,6 +19,7 @@ form {
 .gif-button {
   background: green;
   color: white;
+  margin: 3px;
 }
 
 #add-gif {
